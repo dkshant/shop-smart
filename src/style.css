@@ -1,0 +1,382 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+span,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 62.5%;
+  /* Corrects text resizing ospanly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll;
+  /* Keeps page centered in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+  box-sizing: border-box;
+  /* Apply a natural box layout model to the document; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
+}
+
+:root {
+  --primary: #222222;
+  --secondary: #555555;
+  --gray: #979797;
+  --medium-gray: #EAEAEE;
+  --light-gray: #F5F5F7;
+  --white: #FFFF;
+  --black: #000;
+  --montserrat-font: "Montserrat", sans-serif;
+  /* --purple: #7247CA; */
+  /* --purple-shade: #58379B; */
+  /* --red: #FF3636; */
+}
+
+body {
+  background: var(--white);
+  color: var(--secondary);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+  font-family: var(--montserrat-font);
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary);
+  line-height: 1.2;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+p,
+li {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+ul li{
+  list-style: none;
+}
+
+a{
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.2s linear 0s;
+  color: var(--secondary);
+}
+
+a:hover{
+  color: var(--primary);
+}
+
+button{
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: var(--montserrat-font);
+  background: var(--primary);
+  border: none;
+  transition: all 0.2s linear 0s;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+button:hover{
+  background: var(--secondary);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+textarea,
+select{
+  font-family: var(--source-serif-font);
+  border-radius: 5px;
+  border: none;
+  padding: 10px 12px;
+  font-size: 16px;
+  background-color: var(--light-gray);
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+input[type="submit"]{
+  cursor: pointer;
+  background-color: var(--purple);
+  border-radius: 5px;
+  border: none;
+  color: var(--white);
+  padding: 10px 16px;
+  transition: all 0.2s linear 0s;
+}
+
+input[type="submit"]:hover{
+  background-color: var(--purple-shade);
+}
+
+textarea {
+  resize: vertical;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  transition: all 0.3s linear 0s;
+}
+
+figure{
+  margin: 0 auto 15px auto;
+  line-height: 0;
+  position: relative;
+}
+
+/* Reusable style */
+
+.container{
+  width: 100%;
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+section {
+  padding: 30px 0;
+}
+
+.entry-header {
+  padding-bottom: 20px;
+}
+
+.entry-header .entry-title {
+  text-align: center;
+}
+
+.fetch-error-msg {
+  font-size: 20px;
+}
+
+/* header styling start */
+
+.hgroup-wrap {
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.site-logo {
+    width: 170px;
+    line-height: 0;
+}
+
+.navigation {
+    padding-left: 15px;
+    width: 84%;
+    width: calc(100% - 170px);
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation ul li{
+    margin: 0 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.navigation ul li:first-child{
+    margin-left: 0;
+}
+
+.navigation ul li:last-child{
+    margin-right: 0;
+}
+
+/* header styling end */
+
+/* banner styling start */
+
+.banner-content-wrap {
+    display: grid;
+    grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    gap: 30px;
+    align-items: center;
+}
+
+.banner .featured-image {
+  margin-bottom: 0;
+}
+
+/* banner styling end */
+
+/* our collections start */
+
+.our-collections-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.our-collections-content .product-item {
+  width: 30%;
+  margin: 0 15px 30px 15px;
+  width: calc(33.33% - 30px);
+}
+
+.our-collections-content .product-item .featured-image{
+  overflow: hidden;
+}
+
+.our-collections-content .product-item:hover img{
+  transform: scale(1.1);
+}
+
+/* our collections end */
+
+.blogs-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.blog-item {
+  width: 47%;
+  margin: 0 15px 30px 15px;
+  width: calc(50% - 30px);
+  display: grid;
+  grid-template-columns: calc(50% - 10px) calc(50% - 10px);
+  gap: 20px;
+}
