@@ -1,5 +1,4 @@
 import { Link, NavLink } from 'react-router-dom';
-import siteLogo from './assets/images/site-logo.png';
 
 function Header(){
     return(
@@ -7,7 +6,7 @@ function Header(){
             <div className="container">
                 <div className="hgroup-wrap">
                     <div className="site-logo">
-                        <Link to='/'><img src={siteLogo} alt="site logo" /></Link>
+                        <Link to='/'>Shop Smart</Link>
                     </div>
                     <div className="navigation">
                         <ul>

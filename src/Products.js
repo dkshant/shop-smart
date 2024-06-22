@@ -1,12 +1,8 @@
 import useFetch from "./useFetch";
 
 function Products(){
-
-    const {dataContent: products, isLoading, error} = useFetch('https://fakestoreapi.com/products/');
-
-    const getImage = (imageName) => {
-        return require(`./assets/images/collections/${imageName}`)
-    }
+    
+    const {dataContent: items, isLoading, error} = useFetch('https://dummyjson.com/products?limit=8');
 
     return(
         <section className="our-collections">
@@ -17,13 +13,14 @@ function Products(){
                 <div className="our-collections-content">
                     {isLoading && <p className="loading-msg">Fetching the data...</p>}
                     {error && <p className="fetch-error-msg">{error}</p>}
-                    {products && products.map(product => (
+                    {items && items.products.map(product => (
                         <div className="product-item" key={product.id}>
                             <figure className="featured-image">
-                                <img src={getImage(product.image)} alt="" />
+                                <img src={product.thumbnail} alt="" />
                             </figure>
                             <div className="product-detail">
-                                <h3 className="product-title">{product.name}</h3>
+                                <h4 className="product-title">{product.title}</h4>
+                                <span className="product-rating">Rating: {product.rating}</span>
                                 <span className="price">{product.price + ' $'}</span>
                             </div>
                         </div>

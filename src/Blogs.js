@@ -4,10 +4,6 @@ function Blogs(){
 
     const {dataContent: blogs, isLoading, error} = useFetch('http://localhost:5000/blogs');
 
-    const getImage = (imageName) => {
-        return require(`./assets/images/blog-img/${imageName}`)
-    }
-
     return(
         <section className="blogs-section">
             <div className="container">
@@ -18,7 +14,7 @@ function Blogs(){
                     {blogs && blogs.map(blog => (
                         <div className="blog-item" key={blog.id}>
                             <figure className="featured-image">
-                                <img src={getImage(blog.image)} alt="" />
+                                <img src={blog.image} alt="" />
                             </figure>
                             <div className="blog-detail">
                                 <h3 className="blog-title">{blog.title}</h3>

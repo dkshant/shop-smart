@@ -288,7 +288,7 @@ section {
 /* header styling start */
 
 .hgroup-wrap {
-    padding: 15px 0;
+    padding: 30px 0 15px 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -296,7 +296,11 @@ section {
 
 .site-logo {
     width: 170px;
-    line-height: 0;
+}
+
+.site-logo a{
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .navigation {
@@ -351,9 +355,9 @@ section {
 }
 
 .our-collections-content .product-item {
-  width: 30%;
+  width: 22%;
   margin: 0 15px 30px 15px;
-  width: calc(33.33% - 30px);
+  width: calc(25% - 30px);
 }
 
 .our-collections-content .product-item .featured-image{
@@ -362,6 +366,14 @@ section {
 
 .our-collections-content .product-item:hover img{
   transform: scale(1.1);
+}
+
+.product-item .product-title {
+  font-weight: 500;
+}
+
+.product-detail > span{
+  display: block;
 }
 
 /* our collections end */
