@@ -1,7 +1,9 @@
 import useFetch from "./useFetch";
+import starIcon from './assets/images/rating-icon.png';
+import { Link } from "react-router-dom";
 
 function Products(){
-    
+
     const {dataContent: items, isLoading, error} = useFetch('https://dummyjson.com/products?limit=8');
 
     return(
@@ -15,14 +17,19 @@ function Products(){
                     {error && <p className="fetch-error-msg">{error}</p>}
                     {items && items.products.map(product => (
                         <div className="product-item" key={product.id}>
-                            <figure className="featured-image">
-                                <img src={product.thumbnail} alt="" />
-                            </figure>
-                            <div className="product-detail">
-                                <h4 className="product-title">{product.title}</h4>
-                                <span className="product-rating">Rating: {product.rating}</span>
-                                <span className="price">{product.price + ' $'}</span>
-                            </div>
+                            <Link to={`/products/${product.id}`}>
+                                <figure className="featured-image">
+                                    <img src={product.thumbnail} alt="product thumbnail" />
+                                </figure>
+                                <div className="product-detail">
+                                    <h4 className="product-title">{product.title}</h4>
+                                    <span className="product-rating-wrap">
+                                        <img src={starIcon} alt="star-icon" />
+                                        <span>{product.rating}</span>
+                                    </span>
+                                    <span className="price">{product.price + ' $'}</span>
+                                </div>
+                            </Link>
                         </div>
                     ))}
                 </div>

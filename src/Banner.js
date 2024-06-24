@@ -1,4 +1,4 @@
-import bannerImg from './assets/images/banner-img.jpeg';
+import bannerImg from './assets/images/banner-img.jpg';
 
 function Banner(){
     return(
@@ -10,7 +10,7 @@ function Banner(){
                     </figure>
                     <div className="banner-content">
                         <h2 className="entry-title">
-                        Every day is unique, just like our tea
+                        Every day is unique, just like our products
                         </h2>
                         <p>
                         Lorem ipsum dolor sit amet consectetur. Orci nibh nullam risus adipiscing odio. Neque lacus nibh eros in.
